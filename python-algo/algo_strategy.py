@@ -110,12 +110,12 @@ class AlgoStrategy(gamelib.AlgoCore):
         # More community tools available at: https://terminal.c1games.com/rules#Download
 
         # Place turrets that attack enemy units
-        turret_locations = [[2, 13], [24, 13], [25, 13], [3, 12], [24, 12], [11, 4], [15, 4]]
+        turret_locations = [[2, 13], [21, 12], [22, 12], [26, 12], [22, 11], [11, 4], [15, 4]]
         # attempt_spawn will try to spawn units if we have resources, and will check if a blocking unit is already there
         game_state.attempt_spawn(TURRET, turret_locations)
         
         # Place walls in front of turrets to soak up damage for them
-        final_wall = [[0, 13], [1, 13], [1, 12], [2, 12], [25, 12], [2, 11], [3, 11], [24, 11], [3, 10], [4, 10], [23, 10], [4, 9], [22, 9], [5, 8], [21, 8], [6, 7], [20, 7], [7, 6], [19, 6], [8, 5], [18, 5], [9, 4], [17, 4], [10, 3], [16, 3], [11, 2], [12, 2], [13, 2], [14, 2], [15, 2], [16, 2], [12, 1], [15, 1], [13, 0], [14, 0]]
+        final_wall = [[0, 13], [1, 13], [25, 13], [26, 13], [27, 13], [1, 12], [2, 12], [2, 11], [3, 11], [23, 11], [3, 10], [4, 10], [22, 10], [4, 9], [21, 9], [5, 8], [20, 8], [6, 7], [19, 7], [7, 6], [18, 6], [8, 5], [17, 5], [9, 4], [16, 4], [10, 3], [15, 3], [11, 2], [14, 2], [12, 1], [13, 1], [14, 1], [13, 0], [14, 0]]
         
         if game_state.turn_number == 1:
             wall_locations = [[0, 13], [1, 12], [2, 11], [3, 10], [4, 9], [5, 8], [6, 7], [7, 6], [8, 5], [9, 4], [10, 3], [11, 2], [12, 1], [13, 0]]
