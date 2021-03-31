@@ -90,8 +90,8 @@ class AlgoStrategy(gamelib.AlgoCore):
                 game_state.attempt_spawn(SCOUT, best_location, 1000)
 
             # Lastly, if we have spare SP, let's build some Factories to generate more resources
-            support_locations = [[25, 11], [24, 10], [23, 9]]
-            game_state.attempt_spawn(SUPPORT, support_locations)
+            # support_locations = [[25, 11], [24, 10], [23, 9]]
+            # game_state.attempt_spawn(SUPPORT, support_locations)
 
     def build_defences(self, game_state):
         """
