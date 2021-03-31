@@ -129,8 +129,8 @@ class AlgoStrategy(gamelib.AlgoCore):
             # upgrade nearest turret if possible first
             for i in range(-3, 3):
                 for j in range(-3, 3):
-                    if game_state.contains_stationary_unit(location[0] + i, location[1] + j):
-                        game_state.attempt_upgrade(location[0] + i, location[1] + j)
+                    if game_state.contains_stationary_unit([location[0] + i, location[1] + j]):
+                        game_state.attempt_upgrade([location[0] + i, location[1] + j])
 
     def get_low_damage_pos(self, game_state):
         # We can spawn moving units on our edges so a list of all our edge locations
