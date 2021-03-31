@@ -126,9 +126,11 @@ class AlgoStrategy(gamelib.AlgoCore):
         as shown in the on_action_frame function
         """
         for location in self.scored_on_locations:
-            # Build turret one space above so that it doesn't block our own edge spawn locations
-            build_location = [location[0], location[1]+1]
-            game_state.attempt_spawn(TURRET, build_location)
+            # upgrade nearest turret if possible first
+            for i in range(-3, 3):
+                for j in range(-3, 3):
+                    if game_state.contains_stationary_unit(location[0] + i, location[1] + j):
+                        game_state.attempt_upgrade(location[0] + i, location[1] + j)
 
     def get_low_damage_pos(self, game_state):
         # We can spawn moving units on our edges so a list of all our edge locations
